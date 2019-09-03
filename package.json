@@ -1,0 +1,22 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "learn jenkins",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chynamyerz/node-server.git"
+  },
+  "author": "Sifiso Myeza",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chynamyerz/node-server/issues"
+  },
+  "homepage": "https://github.com/chynamyerz/node-server#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
