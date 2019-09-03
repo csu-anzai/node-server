@@ -1,2 +1,2 @@
 # node-server
-A simple node server for learning jetinks
+A simple node server for learning jenkins
