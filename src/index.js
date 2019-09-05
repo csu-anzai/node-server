@@ -5,8 +5,10 @@ const port = 3000
 server.get('/', (req, res) => res.send('Hello World!'))
 
 if (process.env.NODE_ENV === "test"){
-    return
+    server.get('/', (req, res) => res.send('Hello World!'))
+}else{
+    server.get('/', (req, res) => res.send('Hello World!'))
+    server.listen(port, () => console.log(`Example app listening on port ${port}!`))
 }
-server.listen(port, () => console.log(`Example app listening on port ${port}!`))
 
 module.exports = server;
