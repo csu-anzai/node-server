@@ -3,18 +3,19 @@ pipeline {
   stages {
     stage('Install npm packages') { 
       steps {
-        sh "cd /home/sifiso/node-server && yarn install"
+        sh "git pull"
+        sh "yarn install"
       }
     }
     stage('Test the server') { 
       steps {
-        sh "cd /home/sifiso/node-server && yarn test"
+        sh "yarn test"
       }
     }
     stage('Deploy') { 
       steps {
-        sh "cd /home/sifiso/node-server && pm2 start src/index.js"
-        sh "cd /home/sifiso/node-server && pm2 ls"
+        sh "yarn restart"
+        sh "pm2 ls"
       }
     }
   }
