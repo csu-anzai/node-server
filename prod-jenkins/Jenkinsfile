@@ -3,8 +3,7 @@ pipeline {
   stages {
     stage('Install npm packages') { 
       steps {
-        sh "cd /home/sifiso/ && [ -d ${node-server} ] && rm -rf /home/sifiso/node-server"
-        sh "cd /home/sifiso/ && git clone https://github.com/chynamyerz/node-server"
+        sh "cd /home/sifiso/ && git pull"
         sh "cd /home/sifiso/node-server && yarn install"
       }
     }
