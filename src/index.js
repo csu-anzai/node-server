@@ -8,7 +8,7 @@ if (process.env.NODE_ENV === "test"){
     server.get('/', (req, res) => res.send('Hello World!'))
     server.listen({
         port: 3000
-    }, () => console.log(`Example app listening on port ${port}!`))
+    }, () => console.log(`Example server listening on port ${port}!`))
 }else if(process.env.NODE_ENV === "prod"){
     server.get('/', (req, res) => res.send('Hello World!'))
     server.listen({
