@@ -13,7 +13,6 @@ pipeline {
     }
     stage('Deploy') { 
       steps {
-        sh "pm2 restart index"
         sh "pm2 ls"
       }
     }
