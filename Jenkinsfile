@@ -14,6 +14,7 @@ pipeline {
     stage('Deploy') { 
       steps {
         sh "yarn start"
+        sh "pm2 ls"
       }
     }
   }
