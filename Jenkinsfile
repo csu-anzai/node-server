@@ -13,7 +13,8 @@ pipeline {
     }
     stage('Deploy') { 
       steps {
-        sh "pm2 start src/index.js"
+        sh "yarn start"
+        sh "pm2 show index"
       }
     }
   }
