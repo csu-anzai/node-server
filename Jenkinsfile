@@ -13,7 +13,7 @@ pipeline {
     }
     stage('Deploy') { 
       steps {
-        sh "cd /home/sifiso/node-server && yarn start"
+        sh "cd /home/sifiso/node-server && pm2 start"
         sh "cd /home/sifiso/node-server && pm2 ls"
       }
     }
