@@ -14,6 +14,6 @@ describe("GET /", () => {
     }
 
     expect(responce.status).toBe(200);
-    expect(responce.text).toContain("Hello World!");
+    expect(responce.text).toContain("Hello world!");
   });
 });
