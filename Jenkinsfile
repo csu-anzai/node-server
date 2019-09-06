@@ -13,7 +13,7 @@ pipeline {
     }
     stage('Deploy') { 
       steps {
-        sh "yarn restart"
+        sh "pm2 restart"
         sh "pm2 ls"
       }
     }
