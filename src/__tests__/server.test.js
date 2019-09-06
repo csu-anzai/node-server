@@ -11,7 +11,6 @@ describe("GET /", () => {
     } catch (e) {
        console.log(e.message)
     }
-   
 
    expect(responce.status).toBe(200);
    expect(responce.text).toContain("Hello World!");

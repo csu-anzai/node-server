@@ -4,8 +4,8 @@
   "description": "learn jenkins",
   "main": "index.js",
   "scripts": {
-    "start": "pm2 start src/index.js",
-    "dev": "node src/index.js",
+    "start": "NODE_ENV=prod node src/index.js",
+    "dev": "NODE_ENV=dev node src/index.js",
     "test": "NODE_ENV=test jest"
   },
   "repository": {
