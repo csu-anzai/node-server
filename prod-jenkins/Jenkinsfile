@@ -4,7 +4,7 @@ pipeline {
     stage('Deploy') { 
       steps {
         sh '''
-          ssh -o StrictHostKeyChecking=no sifiso@localhost
+          ssh -o StrictHostKeyChecking=no -t sifiso@192.168.158.131
           cd ~/node-server
           git pull
           yarn install
