@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "NODE_ENV=prod pm2 start src/index.js",
+    "restart": "NODE_ENV=prod pm2 restart index",
     "dev": "NODE_ENV=dev node src/index.js",
     "test": "NODE_ENV=test jest"
   },
