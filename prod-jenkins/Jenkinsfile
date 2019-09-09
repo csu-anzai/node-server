@@ -4,11 +4,11 @@ pipeline {
     stage('Deploy') { 
       steps {
         sh '''
-          ssh -o StrictHostKeyChecking=no -t sifiso@192.168.158.131
-          cd ~/node-server
-          git pull
-          yarn install
-          yarn restart
+          ssh -o StrictHostKeyChecking=no -tt sifiso@192.168.158.131 &&
+          cd ~/node-server &&
+          git pull &&
+          yarn install &&
+          yarn restart &&
           exit
         '''
       }
