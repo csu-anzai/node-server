@@ -1,21 +1,16 @@
 pipeline {
   agent any 
   stages {
-    stage('Install npm packages') { 
-      steps {
-        sh "cd /home/sifiso/ && git pull"
-        sh "cd /home/sifiso/node-server && yarn install"
-      }
-    }
-    stage('Test the server') { 
-      steps {
-        sh "/home/sifiso/node-server && yarn test"
-      }
-    }
     stage('Deploy') { 
       steps {
-        sh "/home/sifiso/node-server && pm2 restart all"
-        sh "pm2 ls"
+        sh '''
+          ssh sifiso@localhost
+          cd ~/node-server
+          git pull
+          yarn
+          yarn restart
+          exit
+        '''
       }
     }
   }

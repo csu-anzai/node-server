@@ -11,11 +11,5 @@ pipeline {
         sh "yarn test"
       }
     }
-    stage('Deploy') { 
-      steps {
-        sh "yarn start"
-        sh "pm2 ls"
-      }
-    }
   }
 }
